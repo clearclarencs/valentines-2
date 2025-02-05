@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Match made in heaven</title>
   <link href="/hops.ico" rel="shortcut icon" type="image/x-icon"/>
   <style>
@@ -118,7 +119,6 @@
       font-size: 1.5rem;
     }
 
-    /* Modal (pop-up) styling */
     .popup-overlay {
       position: fixed;
       top: 0;
@@ -166,6 +166,29 @@
     .restart-btn {
       margin-top: 1rem;
       background-color: #e6397f;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .quiz-step {
+        padding: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .popup-content {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -232,7 +255,6 @@
     </div>
   </div>
 
-  <!-- Modal Popup -->
   <div class="popup-overlay" id="resultPopup">
     <div class="popup-content">
       <button class="close-btn" onclick="closePopup()">&times;</button>
@@ -242,7 +264,7 @@
       </div>
       <p id="matchName" style="font-size:5rem; font-weight:bold;"></p>
       <p id="message"></p>
-      <!-- Restart Button -->
+
       <button type="button" class="restart-btn" onclick="restartQuiz()">Find a new mans</button>
     </div>
   </div>
@@ -252,14 +274,12 @@
 
     function nextStep(stepNumber) {
       document.getElementById(`step${stepNumber}`).classList.remove("active");
-
       currentStep = stepNumber + 1;
       document.getElementById(`step${currentStep}`).classList.add("active");
     }
 
     function prevStep(stepNumber) {
       document.getElementById(`step${stepNumber}`).classList.remove("active");
-
       currentStep = stepNumber - 1;
       document.getElementById(`step${currentStep}`).classList.add("active");
     }
