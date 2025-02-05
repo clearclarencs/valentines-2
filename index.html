@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Match made in heaven</title>
+  <link href="/hops.ico" rel="shortcut icon" type="image/x-icon"/>
   <style>
-    /* Basic Reset */
     * {
       margin: 0;
       padding: 0;
@@ -13,7 +13,7 @@
     }
 
     body {
-      background: #ffe6f0; /* Light pink */
+      background: #ffe6f0;
       color: #2c2c2c;
       display: flex;
       flex-direction: column;
@@ -44,11 +44,11 @@
       max-width: 600px;
       width: 100%;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: none; /* Hidden by default */
+      display: none; 
     }
 
     .quiz-step.active {
-      display: block; /* Only the active step is shown */
+      display: block;
     }
 
     .step-question {
@@ -163,7 +163,6 @@
       color: #ff70a6;
     }
 
-    /* Style for the restart button inside the popup */
     .restart-btn {
       margin-top: 1rem;
       background-color: #e6397f;
@@ -178,7 +177,7 @@
   <!-- Step 1 -->
   <div class="quiz-step active" id="step1">
     <div class="step-question">
-      <label for="favColor">1. What’s your favorite color?</label>
+      <label for="favColor">1. What’s your favorite colour?</label>
       <input type="text" id="favColor"/>
     </div>
     <div class="step-buttons">
@@ -201,13 +200,13 @@
   <!-- Step 3 -->
   <div class="quiz-step" id="step3">
     <div class="step-question">
-      <label for="petPreference">3. What’s your preference for pets?</label>
+      <label for="petPreference">3. What’s your favourite pet?</label>
       <select id="petPreference">
         <option value="">-- Select an option --</option>
         <option value="dogs">Dogs</option>
         <option value="cats">Cats</option>
-        <option value="noPets">No pets</option>
-        <option value="allPets">All pets!</option>
+        <option value="noPets">Hamster</option>
+        <option value="allPets">Horse</option>
       </select>
     </div>
     <div class="step-buttons">
@@ -229,7 +228,7 @@
     </div>
     <div class="step-buttons">
       <button type="button" onclick="prevStep(4)">Back</button>
-      <button type="button" onclick="finishQuiz()">See My Match</button>
+      <button type="button" onclick="finishQuiz()">Find My Match</button>
     </div>
   </div>
 
@@ -241,10 +240,10 @@
       <div class="heart-divider">
         <span class="heart">♥</span>
       </div>
-      <p id="matchName" style="font-size:2rem; font-weight:bold;"></p>
+      <p id="matchName" style="font-size:5rem; font-weight:bold;"></p>
       <p id="message"></p>
       <!-- Restart Button -->
-      <button type="button" class="restart-btn" onclick="restartQuiz()">Restart Quiz</button>
+      <button type="button" class="restart-btn" onclick="restartQuiz()">Find a new mans</button>
     </div>
   </div>
 
